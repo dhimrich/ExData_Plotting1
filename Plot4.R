@@ -35,7 +35,8 @@ with(power.df, {# The first plot is the same as Plot 2 except ylab
                 # The third plot is Voltage vs. DateTime
                 plot(DateTime, Voltage, type="l");
                 # The fourth plot is Global_reactive_power vs. DateTime
-                plot(DateTime, Global_reactive_power, type="l");
+                # make the line 0.5 because 1 seems heavier than the example
+                plot(DateTime, Global_reactive_power, type="l", lwd=0.5);
 }
 )
 dev.off()
